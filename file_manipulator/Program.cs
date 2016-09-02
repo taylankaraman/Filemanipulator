@@ -11,24 +11,26 @@ namespace FileManipulator
     {
         static void Main(string[] args)
         {
-            string path = "C:\\sources\\FileManipulator\\FileManipulator\\publishedWithCert.txt";
+            // string path = "C:\\sources\\FileManipulator\\FileManipulator\\publishedWithCert.txt";
+            string path = "TextFile1.txt";
 
             // Read the input file
-            int[] numbers = readFileAndReturnArray(path);
+            int[] numbers = readFileAndReturnIntArray(path);
 
             printArray(numbers);
 
             var uniqueNumbers = removeDuplicatesFromIntArray(numbers);
+
+            printArray(uniqueNumbers);
         }
 
-        //taylan
-
+        
         static Array removeDuplicatesFromIntArray(int[] intArray)
         {
             return intArray.Distinct().ToArray();
         }
 
-        static int[] readFileAndReturnArray(string filePath)
+        static int[] readFileAndReturnIntArray(string filePath)
         {
             string line;
             int counter = 0;
